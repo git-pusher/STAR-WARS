@@ -22,8 +22,8 @@ async componentDidMount() {
     const characters = this.state.info.map(function(character, index){
       return (            
         <div className="col-md-4">
-          <div className="card mt-4">
-            <div className="card-header">
+          <div className="card border-info bg-transparent mb-3 mt-4">
+            <div className="card-header bg-dark border-info">
               {/* <img src="..." class="card-img" alt="..."/> */}
               <h3><Message
                 key={`${character.name}-${index}`}
@@ -35,11 +35,12 @@ async componentDidMount() {
                 {character.gender}
               </span>
             </div>        
-            <div className="card-body">
+            <div className="card-body text-white">
               <p>Año de nacimiento: {character.birth_year}</p>
               <p>Estatura: {character.height} cms.</p>
-              <p><mark>Peso: {character.mass} kgs.</mark></p>
-            </div>            
+              <p>Peso: {character.mass} kgs.</p>
+            </div>  
+            {/* <div class="card-footer bg-transparent border-info">Footer</div>           */}
           </div>        
         </div>               
       )
