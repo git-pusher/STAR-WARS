@@ -9,17 +9,17 @@ import Message from './components/Message';
 class App extends Component {
   state = {
     info: []
-}
+  }
 
 async componentDidMount() {
     const dataRaw = await fetch ('https://swapi.co/api/people/')
     const data = await dataRaw.json()
 
     this.setState({info: data.results})
-}
+  }
 
-  render() {
-    const characters = this.state.info.map(function(character, index){
+render() {
+  const characters = this.state.info.map(function(character, index){
       return (            
         <div className="col-md-4">
           <div className="card border-info bg-transparent mb-3 mt-4">
@@ -38,9 +38,12 @@ async componentDidMount() {
             <div className="card-body text-white">
               <p>Año de nacimiento: {character.birth_year}</p>
               <p>Estatura: {character.height} cms.</p>
-              <p>Peso: {character.mass} kgs.</p>
-            </div>  
-            {/* <div class="card-footer bg-transparent border-info">Footer</div>           */}
+              <p>Peso: {character.mass} kgs.</p> 
+{/*           ==============PENDIENTE==============          
+              <p>Planeta: {character.homeworld}</p> 
+              ===================================== */}
+
+            </div>
           </div>        
         </div>               
       )
@@ -77,6 +80,6 @@ async componentDidMount() {
       </div>
     );
   }
-}
+  }
 
 export default App;
