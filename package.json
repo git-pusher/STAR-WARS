@@ -2,7 +2,7 @@
   "name": "sesion-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://git-pusher.github.io/STAR-WARS/",
+  "homepage": "https://git-pusher.github.io/STAR-WARS-REACT/",
   "dependencies": {
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
